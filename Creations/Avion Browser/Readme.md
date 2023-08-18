@@ -1,85 +1,60 @@
-Absolutely, let's enhance the README to make it more informative and visually appealing:
+<p align="center">
+  <img width="408" alt="Screenshot 2023-08-18 at 18 48 19" src="https://github.com/princebhatt9588/Versatile_Code_Hub/assets/117750531/79722d1e-70de-43cb-82f0-130e0203e6e8">
+   
+</p>
 
----
+# Avion Browser
 
-<div align="center">
-  <img src="screenshot.png" alt="Efflux Browser Screenshot" width="600">
-</div>
+Avion Browser is a lightweight web browser application built using Python and the PyQt5 library. It offers essential browsing features in an intuitive interface.
 
-# Efflux Browser
+## Features
 
-Efflux Browser is a lightweight web browser developed using Python and the PyQt5 library. This browser empowers users to navigate the internet seamlessly, offering intuitive controls for browsing history, page reloading, and direct URL input.
+- **Effortless Navigation:** Browse the web seamlessly with back and forward navigation buttons.
 
-## Table of Contents
+- **Instant Reload:** Refresh web pages instantly using the reload button on the toolbar.
 
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Introduction
-
-Efflux Browser brings the convenience of web browsing to your fingertips. Crafted with simplicity in mind, it provides a clean user interface coupled with essential browsing functionalities.
+- **Direct URL Entry:** Enter URLs in the address bar to access specific websites directly.
 
 ## Installation
 
-Ensure you have the prerequisites installed before proceeding:
+Follow these steps to run Avion Browser on your machine:
 
-- Python 3.x
-- PyQt5 library
+1. **Prerequisites:** Ensure you have Python and PyQt5 installed.
 
-Follow these steps to run the browser:
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/efflux-browser.git
+2. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/yourusername/avion-browser.git
    ```
 
-2. Navigate to the project directory:
-   ```sh
-   cd efflux-browser
+3. **Navigate to the Project Directory:**
+   ```bash
+   cd avion-browser
    ```
 
-3. Run the browser:
-   ```sh
-   python main.py
+4. **Run the Application:**
+   ```bash
+   python browser.py
    ```
 
 ## Usage
 
-Efflux Browser features an ergonomic user interface that includes:
+1. Launch the application to open the main browser window.
 
-- **Back Button:** Return to previously visited pages.
-- **Forward Button:** Navigate forward in your browsing history.
-- **Reload Button:** Refresh the current webpage.
-- **URL Bar:** Enter URLs directly for swift navigation.
+2. Explore the Toolbar:
+   - Use the left arrow to go back.
+   - Use the right arrow to go forward.
+   - Click the circular arrow to reload the current page.
 
-## Features
+3. Enter URLs in the address bar and press `Enter` to visit websites.
 
-- **Simplicity:** An intuitive design for an uncomplicated browsing experience.
-- **Basic Browsing:** Navigate back, forward, and reload pages effortlessly.
-- **Direct URL Input:** Enter URLs directly for quick access to websites.
+## Example
 
-## Screenshots
+Here's an example of using Avion Browser to explore the vast realm of knowledge on the web:
 
-![Efflux Browser Screenshot](screenshot.png)
-*(Efflux Browser in action)*
-
-## Contributing
-
-We welcome contributions! If you encounter issues or have suggestions, feel free to open an issue or submit a pull request in the [GitHub repository](https://github.com/yourusername/efflux-browser).
+<p align="center">
+  <img src="example_usage.gif" alt="Avion Browser Example Usage">
+</p>
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-To include the screenshot image, follow the previous steps. Remember to replace `yourusername` in the GitHub repository URL with your actual GitHub username.
-
----
-
-This updated README provides a cleaner and more engaging presentation of your Efflux Browser project. Feel free to further customize the content to suit your preferences and project details.
+This project is licensed under the MIT License. For details, see the [LICENSE](LICENSE) file.
