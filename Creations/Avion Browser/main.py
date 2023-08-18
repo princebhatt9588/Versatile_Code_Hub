@@ -42,7 +42,7 @@ class MainWindow(QMainWindow):
 
 app = QApplication(sys.argv)
 
-QApplication.setApplicationName("EFFLUX browser")
+QApplication.setApplicationName("Avion browser")
 
 window = MainWindow()
 
