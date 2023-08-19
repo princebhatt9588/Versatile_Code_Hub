@@ -57,4 +57,4 @@ Here's an example of using Avion Browser to explore the vast realm of knowledge 
 
 ## License
 
-This project is licensed under the MIT License. For details, see the [LICENSE](LICENSE) file.
+This project is licensed under the MIT License.
