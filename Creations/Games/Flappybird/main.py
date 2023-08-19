@@ -1,10 +1,8 @@
 import pygame, sys, random
 
-
 def draw_floor():
     screen.blit(floor_surface, (floor_x_pos, 512 - 75))
     screen.blit(floor_surface, (floor_x_pos + 200, 512 - 75))
-
 
 def create_pipe():
     random_pipe_pos = random.choice(pipe_height)
@@ -12,12 +10,10 @@ def create_pipe():
     top_pipe = pipe_surface.get_rect(midtop=(500, random_pipe_pos - 450))
     return bottom_pipe, top_pipe
 
-
 def move_pipe(pipes):
     for pipe in pipes:
         pipe.centerx -= 5
     return pipes
-
 
 def draw_pipes(pipes):
     for pipe in pipes:
@@ -26,7 +22,6 @@ def draw_pipes(pipes):
         else:
             flip_pipe = pygame.transform.flip(pipe_surface, False, True)
             screen.blit(flip_pipe, pipe)
-
 
 def check_collision(pipes):
     for pipe in pipes:
@@ -39,20 +34,17 @@ def check_collision(pipes):
 
     return True
 
-
 def rotate_bird(bird):
     new_bird = pygame.transform.rotozoom(bird, -bird_movement * 5, 1)
     return new_bird
-
 
 def bird_animation():
     new_bird = bird_frames[bird_index]
     new_bird_rect = new_bird.get_rect(center=(50, bird_rect.centery))
     return new_bird, new_bird_rect
 
-
 def score_display(game_state):
-    if game_state == " main_game":
+    if game_state == "main_game":
         score_surface = game_font.render(str(int(score)), True, (255, 255, 255))
         score_rect = score_surface.get_rect(center=(288 / 2, 50))
         screen.blit(score_surface, score_rect)
@@ -68,12 +60,10 @@ def score_display(game_state):
         high_score_rect = high_score_surface.get_rect(center=(288 / 2, 410))
         screen.blit(high_score_surface, high_score_rect)
 
-
 def update_score(score, high_score):
     if score > high_score:
         high_score = score
     return high_score
-
 
 pygame.mixer.pre_init()
 pygame.init()
@@ -81,24 +71,20 @@ screen = pygame.display.set_mode((288, 512))
 Clock = pygame.time.Clock()
 game_font = pygame.font.Font("Downloads/flappy-bird.ttf", 40)
 
-# game var
+# Game variables
 gravity = 0.25
 bird_movement = 0
 game_active = True
 score = 0
 high_score = 0
 
-bg_surface = pygame.image.load("Documents/assets/background-night.png")
-
-
-floor_surface = pygame.image.load("Documents/assets/base.png")
+bg_surface = pygame.image.load("https://github.com/princebhatt9588/Versatile_Code_Hub/raw/main/assets/background-night.png")
+floor_surface = pygame.image.load("https://github.com/princebhatt9588/Versatile_Code_Hub/raw/main/assets/base.png")
 floor_x_pos = 0
 
-bird_downflap = pygame.image.load("Documents/assets/bluebird.png").convert_alpha()
-bird_midflap = pygame.image.load(
-    "Documents/assets/bluebird-midflap.png"
-).convert_alpha()
-bird_upflap = pygame.image.load("Documents/assets/bluebird-upflap.png").convert_alpha()
+bird_downflap = pygame.image.load("https://github.com/princebhatt9588/Versatile_Code_Hub/raw/main/assets/bluebird.png").convert_alpha()
+bird_midflap = pygame.image.load("https://github.com/princebhatt9588/Versatile_Code_Hub/raw/main/assets/bluebird-midflap.png").convert_alpha()
+bird_upflap = pygame.image.load("https://github.com/princebhatt9588/Versatile_Code_Hub/raw/main/assets/bluebird-upflap.png").convert_alpha()
 bird_frames = [bird_downflap, bird_midflap, bird_upflap]
 bird_index = 0
 bird_surface = bird_frames[bird_index]
@@ -107,22 +93,21 @@ bird_rect = bird_surface.get_rect(center=(50, 512 / 2))
 BIRDFLAP = pygame.USEREVENT + 1
 pygame.time.set_timer(BIRDFLAP, 200)
 
-# bird_surface = pygame.image.load('Documents/assets/bluebird-midflap.png').convert_alpha()
-# bird_rect = bird_surface.get_rect(center = (50,512/2))
-
-pipe_surface = pygame.image.load("Documents/assets/pipe-green.png")
+pipe_surface = pygame.image.load("https://github.com/princebhatt9588/Versatile_Code_Hub/raw/main/assets/pipe-green.png")
 pipe_list = []
 SPAWNPIPE = pygame.USEREVENT
 pygame.time.set_timer(SPAWNPIPE, 1000)
 pipe_height = [200, 250, 300, 350, 400]
 
-game_over_surface = pygame.image.load("Documents/assets/message.png")
+game_over_surface = pygame.image.load("https://github.com/princebhatt9588/Versatile_Code_Hub/raw/main/assets/message.png")
 game_over_rect = game_over_surface.get_rect(center=(288 / 2, 512 / 2))
 
 flap_sound = pygame.mixer.Sound("Documents/Everything/sfx_wing.wav")
 death_sound = pygame.mixer.Sound("Documents/Everything/sfx_hit.wav")
 score_sound = pygame.mixer.Sound("Documents/Everything/sfx_point.wav")
 score_sound_countdown = 100
+
+# Game loop
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
